@@ -67,4 +67,7 @@ set tw=80
 "Set line numbers
 set nu
 
+"Point out 80 char column
+set colorcolumn=80
+
 execute pathogen#infect()
