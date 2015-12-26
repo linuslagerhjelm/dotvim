@@ -68,6 +68,7 @@ set tw=80
 set nu
 
 "Point out 80 char column
-set colorcolumn=80
+let &colorcolumn=join(range(81,999),",")
+highlight ColorColumn ctermbg=235 guibg=#ffffff
 
 execute pathogen#infect()
