@@ -1,3 +1,17 @@
+"Set the runtime path to include vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'MarcWeber/vim-addon-mw-utils'
+Plugin 'tomtom/tlib_vim'
+Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
+
+call vundle#end()            
+filetype plugin indent on    
+
 "Set how many lines of history VIm has to remember
 set history=700
 
@@ -69,6 +83,14 @@ set nu
 
 "Point out 80 char column
 let &colorcolumn=join(range(81,999),",")
-highlight ColorColumn ctermbg=235 guibg=#ffffff
+highlight ColorColumn ctermbg=238
+
+"Remap space to : 
+nmap <space> :
+vmap <space> :
+
+"Highlight current line
+set cursorline
+hi CursorLine term=bold cterm=NONE ctermbg=238
 
 execute pathogen#infect()
