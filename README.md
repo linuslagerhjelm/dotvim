@@ -1,2 +1,13 @@
 #.vimrc
 This is a the file for my vim configuration. Use it if you like to
+
+Running the included installation script will takes care of installing
+everything for you and set you upp propperly
+
+This can be done as such
+
+Mac:
+``` sh install.sh ```
+
+Linux:
+``` ./install.sh ```
