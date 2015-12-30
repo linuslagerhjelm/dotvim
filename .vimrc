@@ -1,3 +1,7 @@
+set nocompatible
+filetype plugin indent off
+syntax off
+
 "Set the runtime path to include vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -6,8 +10,8 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
+Plugin 'fatih/vim-go'
+Bundle 'Valloric/YouCompleteMe'
 
 call vundle#end()            
 filetype plugin indent on    
@@ -75,8 +79,8 @@ set tabstop=2
 set lbr
 set tw=80
 
-" Always show the status line
- set laststatus=2
+"Always show the status line
+set laststatus=2
 
 "Set line numbers
 set nu
@@ -93,4 +97,6 @@ vmap <space> :
 set cursorline
 hi CursorLine term=bold cterm=NONE ctermbg=238
 
-execute pathogen#infect()
+"Disallow the mouse to copy line numbers
+set mouse=a
+"execute pathogen#infect()
