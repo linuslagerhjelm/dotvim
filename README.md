@@ -6,6 +6,10 @@ everything for you and set you upp propperly
 This can be done by running corresponding script from the folder that this file
 is in. **Requires homebrew to work**
 
+**Also please note:** the installation script will install a newer version of
+vim and make it default on your system.
+
+
 Mac:
 ``` sh install.sh ```
 
