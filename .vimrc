@@ -11,6 +11,7 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'fatih/vim-go'
+Plugin 'wikitopian/hardmode'
 Bundle 'Valloric/YouCompleteMe'
 
 call vundle#end()            
@@ -99,4 +100,13 @@ hi CursorLine term=bold cterm=NONE ctermbg=238
 
 "Disallow the mouse to copy line numbers
 set mouse=a
+
+"Set relative line numbers
+set rnu
+
+"Disable arrow buttons
+let g:HardMode_level = 'wannabe'
+autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+
+
 "execute pathogen#infect()
