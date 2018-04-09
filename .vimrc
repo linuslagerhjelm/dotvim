@@ -12,7 +12,6 @@ Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'fatih/vim-go'
 Plugin 'wikitopian/hardmode'
-Bundle 'Valloric/YouCompleteMe'
 
 call vundle#end()            
 filetype plugin indent on    
