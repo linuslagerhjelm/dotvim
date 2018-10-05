@@ -10,7 +10,6 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
-Plugin 'fatih/vim-go'
 Plugin 'wikitopian/hardmode'
 
 call vundle#end()            
@@ -82,9 +81,6 @@ set tw=80
 "Always show the status line
 set laststatus=2
 
-"Set line numbers
-set nu
-
 "Point out 80 char column
 let &colorcolumn=join(range(81,999),",")
 highlight ColorColumn ctermbg=238
@@ -100,12 +96,14 @@ hi CursorLine term=bold cterm=NONE ctermbg=238
 "Disallow the mouse to copy line numbers
 set mouse=a
 
-"Set relative line numbers
-set rnu
+"Configure line numbers
+set number relativenumber
+augroup numbertoggle
+  autocmd!
+  autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+  autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+augroup END
 
 "Disable arrow buttons
 let g:HardMode_level = 'wannabe'
 autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
-
-
-"execute pathogen#infect()
